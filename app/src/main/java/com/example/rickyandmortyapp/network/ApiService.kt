@@ -6,6 +6,7 @@ import com.example.rickyandmortyapp.util.Constants.CHARACTER
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
+import retrofit2.http.QueryMap
 
 interface ApiService {
     @GET(API.plus(CHARACTER))
@@ -14,26 +15,8 @@ interface ApiService {
     ): Response<GetCharactersResponse>
 
     @GET(API.plus(CHARACTER))
-    suspend fun searchCharactersForName(
-        @Query("name") name: String,
+    suspend fun searchCharacters(
         @Query("page") page: Int,
-    ): Response<GetCharactersResponse>
-
-    @GET(API.plus(CHARACTER))
-    suspend fun searchCharactersForGender(
-        @Query("gender") name: String,
-        @Query("page") page: Int,
-    ): Response<GetCharactersResponse>
-
-    @GET(API.plus(CHARACTER))
-    suspend fun searchCharactersForSpecies(
-        @Query("species") name: String,
-        @Query("page") page: Int,
-    ): Response<GetCharactersResponse>
-
-    @GET(API.plus(CHARACTER))
-    suspend fun searchCharactersForStatus(
-        @Query("status") name: String,
-        @Query("page") page: Int,
+        @QueryMap map: Map<String, String>
     ): Response<GetCharactersResponse>
 }

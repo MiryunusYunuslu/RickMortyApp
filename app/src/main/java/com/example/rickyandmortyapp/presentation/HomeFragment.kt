@@ -151,6 +151,7 @@ class HomeFragment : Fragment(), CharacterItemClicked {
 
                                 charactersList.clear()
                                 homeAdapter.clearList()
+                                resetPage()
 
                                 p0?.let {
                                     filterText = it
