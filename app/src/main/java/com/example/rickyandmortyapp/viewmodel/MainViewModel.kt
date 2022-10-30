@@ -3,7 +3,7 @@ package com.example.rickyandmortyapp.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.rickyandmortyapp.helper.FilterSelection
+import com.example.rickyandmortyapp.FilterSelection
 import com.example.rickyandmortyapp.model.GetCharactersResponse
 import com.example.rickyandmortyapp.repository.RemoteRepository
 import com.example.rickyandmortyapp.util.Constants.FILTER_GENDER
